@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/lizhen2013/ConsoleSerializer.svg?branch=master)](https://travis-ci.com/lizhen2013/ConsoleSerializer)
 # ConsoleSerializer
 
 A tool a serialize error meesage from different browser's console.
