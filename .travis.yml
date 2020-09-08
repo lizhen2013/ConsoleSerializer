@@ -3,6 +3,7 @@ node_js:
   - "stable"
 script:
   - yarn run lint
+  - yarn run test:nowatch
 cache:
   directories:
     - node_modules

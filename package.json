@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:nowatch": "cross-env CI=true jest",
-    "lint": "eslint --ext js,ts,tsx src"
+    "lint": "eslint --ext js,ts src"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
     "@typescript-eslint/parser": "^4.0.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.8.1",
-    "eslint-plugin-react": "^7.20.6",
     "husky": "^4.2.5",
     "jest": "^26.4.2",
     "ts-jest": "^26.3.0",
@@ -37,7 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run test:nowatch && yarn run lint"
+      "pre-commit": "yarn run lint && yarn run test:nowatch"
     }
   }
 }
