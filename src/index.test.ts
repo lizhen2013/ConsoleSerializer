@@ -15,6 +15,9 @@ const mockFirefoxStack = `
   <anonymous>:1:11
   http://192.168.31.8:8000/a.js:22:3
 `;
+const mockStackWithoutFilePaths = `
+  <anonymous>:1:11
+`;
 const makeAssertion = (res: ErrorMessage) => {
   expect(res.message).toEqual("Error Raised");
   expect(res.stack.length).toEqual(4);
@@ -40,5 +43,9 @@ describe("Serialize console error message from different browser", () => {
   it("should serialize meesage from FireFox", () => {
     const res = consoleErrorMessageSerializer(mockFirefoxStack);
     makeAssertion(res);
+  });
+  it("should return error message with empty stack when there is no file paths in stack ", () => {
+    const res = consoleErrorMessageSerializer(mockStackWithoutFilePaths);
+    expect(res.stack.length).toEqual(0);
   });
 });

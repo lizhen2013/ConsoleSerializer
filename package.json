@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "test:nowatch": "cross-env CI=true jest",
-    "lint": "eslint --ext js,ts src"
+    "lint": "eslint --ext js,ts src",
+    "coverage": "yarn jest --watchAll=false --coverage=true --collectCoverage=true"
   },
   "repository": {
     "type": "git",
@@ -38,5 +39,10 @@
     "hooks": {
       "pre-commit": "yarn run lint && yarn run test:nowatch"
     }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
   }
 }
