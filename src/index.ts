@@ -1,4 +1,4 @@
-interface ErrorMessage {
+export interface ErrorMessage {
   message: string;
   stack: Array<{
     line: number;

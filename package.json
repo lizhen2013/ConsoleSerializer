@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "jest",
-    "test:nowatch": "cross-env  CI=true test",
+    "test:nowatch": "cross-env CI=true jest",
     "lint": "eslint --ext js,ts,tsx src"
   },
   "repository": {
